@@ -14,6 +14,10 @@ newTask.innerHTML = `<span>${nameTask}</span>`//добавляем текст з
 newTask.classList.add ('task')//добавляем у див класс таск
 container.append(newTask)//добавляем задачу в контейнер задач
 
+if(formAddTask.querySelector("#immediate").checked){ //если пользователь поставил галочку
+    newTask.classList.add("immediate")//то у задачи добавляем класс immediate
+}
+
 tasks.push (newTask)//добавляем задачу массив
 
 // console.log(divs)
