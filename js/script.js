@@ -6,7 +6,7 @@ let tasks = [] //масив задач
 //функционал добавления задач
 formAddTask.addEventListener('submit', function(event){
     event.preventDefault()//отменяется событие по умолчанию: перезагрузка страницы
-    console.log(event)
+
 let nameTask = inputTask.value;//считываем, что пользователь ввёл в название задачи
 let newTask = document.createElement('div');//создаём пустой тег див для задачи
 newTask.innerHTML = `<span>${nameTask}</span>`//добавляем текст задачи в див
@@ -16,6 +16,8 @@ container.append(newTask)//добавляем задачу в контейнер
 
 tasks.push (newTask)//добавляем задачу массив
 
+// console.log(divs)
+// console.log(nods)
 })
 
 
@@ -36,6 +38,7 @@ newTask.innerHTML = `<span>${nameTask[i]}</span>`//добавляем текст
 
 newTask.classList.add ('task')//добавляем у див класс таск
 container.append(newTask)//добавляем задачу в контейнер задач
+
     }
 
     //сортировки по имени задач
@@ -46,3 +49,10 @@ function compare (a,b){
     if (a.querySelector("span").innerHTML < b.querySelector ("span").innerHTML) return -1
 }
 })
+
+//работа с NodeList
+let divs= document.querySelectorAll("div")//статическая коллекция
+// console.log(divs)
+
+let nods= document.querySelector(".tasks").childNodes//динамическая коллекция
+// console.log(nods)
