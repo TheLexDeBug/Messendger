@@ -46,6 +46,7 @@ container.append(newTask)//добавляем задачу в контейнер
     }
 
     //сортировки по имени задач
+    const btnlowCase = document.getElementById("btn1")
 const btn1 = 
 function compare (a,b){
     if (a.querySelector("span").innerHTML > b.querySelector("span").innerHTML)return 1
@@ -60,3 +61,42 @@ let divs= document.querySelectorAll("div")//статическая коллек�
 
 let nods= document.querySelector(".tasks").childNodes//динамическая коллекция
 // console.log(nods)
+
+
+ let tasks1= document.getElementById("tasks1")
+ let container1= document.getElementById("container1")
+ const btn1=document.getElementById("btn1")
+ function compare (a,b){
+     if (a.querySelector("span").innerHTML > b.querySelector("span").innerHTML)return 1
+    if (a.querySelector("span").innerHTML == b.querySelector("span").innerHTML)return 0
+    if (a.querySelector("span").innerHTML < b.querySelector ("span").innerHTML) return -1
+ }
+ btn1.addEventListener("click",function(){
+    const btnlowCase = document.getElementById("btn1")
+    let nameTasks = [...tasks].sort(compare)
+    for (let i in newTasks){
+        container.append(newTasks[i])
+    }
+ })
+
+ let taskscnopka2= document.getElementById("taskscnopka2")
+ let containercnopka2= document.getElementById("containercnopka2")
+ const btncnopka2=document.getElementById("btncnopka2")
+ function compare (a,b){
+     if (a.querySelector("span").innerHTML > b.querySelector("span").innerHTML)return 1
+    if (a.querySelector("span").innerHTML == b.querySelector("span").innerHTML)return 0
+    if (a.querySelector("span").innerHTML < b.querySelector ("span").innerHTML) return -1
+ }
+ btn1.addEventListener("click",function(){
+    const btnlowCase = document.getElementById("btncnopka2")
+    let nameTasks = [...tasks].sort(compare)
+    for (let i in newTasks){
+        container.append(newTasks[i])
+    }
+ })
+//  const btn4 = document.getElementById("btn4")//Клик по кнопке задание 6
+// btn4.addEventListener("click", function(){
+//     let value
+//     newTasks=newTasks.filter(function(item){
+//         return item.innerHTML.indexOf(value) !=-1
+//     })
